@@ -10,3 +10,18 @@ void Acorazado::setNombre(){
 void Acorazado::setTamanio(int tamanio = 3){
     _Tamanio = tamanio;
 }
+
+int Acorazado::getTamanio(){
+    return _Tamanio;
+}
+
+string Acorazado::getNombre(){
+    return _Nombre;
+}
+
+Acorazado::Acorazado(){
+_Nombre = "Acorazado";
+setTamanio(3);
+texture.loadFromFile("C:/Users/Gonzalo/Desktop/Database/Sprites/Barcos/Acorazado/ShipCruiserHull.png");
+setSprite(texture);
+}

@@ -12,5 +12,17 @@ void Destructor::setTamanio(int tamanio = 2){
 }
 
 string Destructor::getNombre(){
-    return Embarcacion::_Nombre;
+    return _Nombre;
 }
+
+int Destructor::getTamanio(){
+    return _Tamanio;
+}
+
+Destructor::Destructor(){
+_Nombre = "Destructor";
+setTamanio(2);
+texture.loadFromFile("C:/Users/Gonzalo/Desktop/Database/Sprites/Barcos/Destructor/ShipDestroyerHull.png");
+setSprite(texture);
+}
+

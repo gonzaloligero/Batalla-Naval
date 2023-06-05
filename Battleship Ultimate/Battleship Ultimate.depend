@@ -1,9 +1,12 @@
 # depslib dependency file v1.0
-1685835548 source:c:\users\gonzalo\desktop\battleship ultimate\main.cpp
+1685931186 source:c:\users\gonzalo\desktop\battleship ultimate\main.cpp
 	<iostream>
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
-	"Destructor.h"
+	<ctime>
+	"Funciones.h"
+	"Tablero.h"
+	"Jugador.h"
 
 1685750755 c:\users\gonzalo\desktop\battleship ultimate\sfml\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -418,60 +421,65 @@
 	<iostream>
 	"Embarcaciones.h"
 
-1685832349 c:\users\gonzalo\desktop\battleship ultimate\embarcaciones.h
+1685910603 c:\users\gonzalo\desktop\battleship ultimate\embarcaciones.h
 	<iostream>
 	<cstring>
+	<SFML/Graphics.hpp>
 
-1685831362 source:c:\users\gonzalo\desktop\battleship ultimate\tablero.cpp
+1685934067 source:c:\users\gonzalo\desktop\battleship ultimate\tablero.cpp
 	<iostream>
+	<SFML/Graphics.hpp>
 	"Tablero.h"
+	<time.h>
 
-1685834931 c:\users\gonzalo\desktop\battleship ultimate\tablero.h
+1685931176 c:\users\gonzalo\desktop\battleship ultimate\tablero.h
+	<SFML/Graphics.hpp>
 	"Embarcaciones.h"
 	"Destructor.h"
 	"Acorazado.h"
 	"Submarino.h"
 	"Fragata.h"
 	"Portaaviones.h"
+	"UFO.h"
 
-1685832443 source:c:\users\gonzalo\desktop\battleship ultimate\destructor.cpp
+1685920053 source:c:\users\gonzalo\desktop\battleship ultimate\destructor.cpp
 	<iostream>
 	"Destructor.h"
 	"Embarcaciones.h"
 
-1685832743 c:\users\gonzalo\desktop\battleship ultimate\destructor.h
+1685911808 c:\users\gonzalo\desktop\battleship ultimate\destructor.h
 	"Embarcaciones.h"
 
-1685832606 source:c:\users\gonzalo\desktop\battleship ultimate\fragata.cpp
+1685920053 source:c:\users\gonzalo\desktop\battleship ultimate\fragata.cpp
 	<iostream>
 	"Fragata.h"
 	"Embarcaciones.h"
 
-1685832602 c:\users\gonzalo\desktop\battleship ultimate\fragata.h
+1685911865 c:\users\gonzalo\desktop\battleship ultimate\fragata.h
 	"Embarcaciones.h"
 
-1685832714 source:c:\users\gonzalo\desktop\battleship ultimate\submarino.cpp
+1685920053 source:c:\users\gonzalo\desktop\battleship ultimate\submarino.cpp
 	<iostream>
 	"Submarino.h"
 	"Embarcaciones.h"
 
-1685832726 c:\users\gonzalo\desktop\battleship ultimate\submarino.h
+1685912391 c:\users\gonzalo\desktop\battleship ultimate\submarino.h
 	"Embarcaciones.h"
 
-1685832810 source:c:\users\gonzalo\desktop\battleship ultimate\acorazado.cpp
+1685920053 source:c:\users\gonzalo\desktop\battleship ultimate\acorazado.cpp
 	<iostream>
 	"Acorazado.h"
 	"Embarcaciones.h"
 
-1685832801 c:\users\gonzalo\desktop\battleship ultimate\acorazado.h
+1685912169 c:\users\gonzalo\desktop\battleship ultimate\acorazado.h
 	"Embarcaciones.h"
 
-1685833982 source:c:\users\gonzalo\desktop\battleship ultimate\portaaviones.cpp
+1685919899 source:c:\users\gonzalo\desktop\battleship ultimate\portaaviones.cpp
 	<iostream>
 	"Portaaviones.h"
 	"Embarcaciones.h"
 
-1685834055 c:\users\gonzalo\desktop\battleship ultimate\portaaviones.h
+1685912271 c:\users\gonzalo\desktop\battleship ultimate\portaaviones.h
 	"Embarcaciones.h"
 
 1685834604 source:c:\users\gonzalo\desktop\battleship ultimate\enemigo.cpp
@@ -594,4 +602,20 @@
 1685750755 c:\users\gonzalo\desktop\battleship ultimate\sfml\include\sfml\audio\soundfilewriter.hpp
 	<SFML/Audio/Export.hpp>
 	<string>
+
+1685930012 source:c:\users\gonzalo\desktop\battleship ultimate\funciones.cpp
+	<iostream>
+	<cctype>
+	"Funciones.h"
+	"Jugador.h"
+
+1685929688 c:\users\gonzalo\desktop\battleship ultimate\funciones.h
+	"Jugador.h"
+
+1685893310 source:c:\users\gonzalo\desktop\battleship ultimate\jugador.cpp
+	<iostream>
+	<cstring>
+	"Jugador.h"
+
+1685910263 c:\users\gonzalo\desktop\battleship ultimate\jugador.h
 

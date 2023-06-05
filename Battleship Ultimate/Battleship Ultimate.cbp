@@ -51,6 +51,10 @@
 		<Unit filename="Enemigo.h" />
 		<Unit filename="Fragata.cpp" />
 		<Unit filename="Fragata.h" />
+		<Unit filename="Funciones.cpp" />
+		<Unit filename="Funciones.h" />
+		<Unit filename="Jugador.cpp" />
+		<Unit filename="Jugador.h" />
 		<Unit filename="Portaaviones.cpp" />
 		<Unit filename="Portaaviones.h" />
 		<Unit filename="Submarino.cpp" />
