@@ -1,9 +1,11 @@
 # depslib dependency file v1.0
-1685931186 source:c:\users\gonzalo\desktop\battleship ultimate\main.cpp
+1686016628 source:c:\users\gonzalo\desktop\battleship ultimate\main.cpp
 	<iostream>
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 	<ctime>
+	<conio.h>
+	<windows.h>
 	"Funciones.h"
 	"Tablero.h"
 	"Jugador.h"
@@ -417,22 +419,25 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1685832368 source:c:\users\gonzalo\desktop\battleship ultimate\embarcaciones.cpp
+1685935126 source:c:\users\gonzalo\desktop\battleship ultimate\embarcaciones.cpp
 	<iostream>
 	"Embarcaciones.h"
+	"Tablero.h"
 
-1685910603 c:\users\gonzalo\desktop\battleship ultimate\embarcaciones.h
+1686011569 c:\users\gonzalo\desktop\battleship ultimate\embarcaciones.h
 	<iostream>
 	<cstring>
 	<SFML/Graphics.hpp>
 
-1685934067 source:c:\users\gonzalo\desktop\battleship ultimate\tablero.cpp
+1686018822 source:c:\users\gonzalo\desktop\battleship ultimate\tablero.cpp
 	<iostream>
 	<SFML/Graphics.hpp>
 	"Tablero.h"
+	<Windows.h>
 	<time.h>
+	<conio.h>
 
-1685931176 c:\users\gonzalo\desktop\battleship ultimate\tablero.h
+1686018577 c:\users\gonzalo\desktop\battleship ultimate\tablero.h
 	<SFML/Graphics.hpp>
 	"Embarcaciones.h"
 	"Destructor.h"
@@ -442,12 +447,12 @@
 	"Portaaviones.h"
 	"UFO.h"
 
-1685920053 source:c:\users\gonzalo\desktop\battleship ultimate\destructor.cpp
+1685935373 source:c:\users\gonzalo\desktop\battleship ultimate\destructor.cpp
 	<iostream>
 	"Destructor.h"
 	"Embarcaciones.h"
 
-1685911808 c:\users\gonzalo\desktop\battleship ultimate\destructor.h
+1686011569 c:\users\gonzalo\desktop\battleship ultimate\destructor.h
 	"Embarcaciones.h"
 
 1685920053 source:c:\users\gonzalo\desktop\battleship ultimate\fragata.cpp
@@ -603,19 +608,21 @@
 	<SFML/Audio/Export.hpp>
 	<string>
 
-1685930012 source:c:\users\gonzalo\desktop\battleship ultimate\funciones.cpp
+1686019193 source:c:\users\gonzalo\desktop\battleship ultimate\funciones.cpp
 	<iostream>
 	<cctype>
 	"Funciones.h"
+	"Tablero.h"
 	"Jugador.h"
 
-1685929688 c:\users\gonzalo\desktop\battleship ultimate\funciones.h
+1686016102 c:\users\gonzalo\desktop\battleship ultimate\funciones.h
 	"Jugador.h"
+	"Tablero.h"
 
-1685893310 source:c:\users\gonzalo\desktop\battleship ultimate\jugador.cpp
+1686019151 source:c:\users\gonzalo\desktop\battleship ultimate\jugador.cpp
 	<iostream>
 	<cstring>
 	"Jugador.h"
 
-1685910263 c:\users\gonzalo\desktop\battleship ultimate\jugador.h
+1686018525 c:\users\gonzalo\desktop\battleship ultimate\jugador.h
 

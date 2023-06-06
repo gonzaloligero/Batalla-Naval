@@ -6,10 +6,10 @@ using namespace std;
 void Jugador::setNombre(){
 char nombre[20];
 cout<<"Ingrese su nombre: ";
-cin.ignore();
 cin.getline(nombre,20);
-    strcpy(_Nombre,nombre);
+strcpy(_Nombre,nombre);
 }
+
 
 const char* Jugador::getNombre(){
     return _Nombre;

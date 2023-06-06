@@ -17,6 +17,7 @@ public:
     void setSprite(const sf::Texture& texture) {
         _sprite.setTexture(texture);
     }
+    void setUbicacionEnTablero(int x,int y);
     void setNombre();
     void setTamanio(int tamanio);
     int getTamanio();

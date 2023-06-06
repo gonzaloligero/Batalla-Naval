@@ -22,7 +22,14 @@ int Destructor::getTamanio(){
 Destructor::Destructor(){
 _Nombre = "Destructor";
 setTamanio(2);
+_sprite.setScale(0.4f, 0.4f);
+_sprite.setPosition(0,0);
 texture.loadFromFile("C:/Users/Gonzalo/Desktop/Database/Sprites/Barcos/Destructor/ShipDestroyerHull.png");
 setSprite(texture);
+}
+
+void Destructor::setUbicacionEnTablero(int x,int y){
+    _sprite.setPosition(x,y);
+
 }
 

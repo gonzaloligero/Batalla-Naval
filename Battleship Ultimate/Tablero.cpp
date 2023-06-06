@@ -1,17 +1,19 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "Tablero.h"
+#include <Windows.h>
 #include <time.h>
+#include <conio.h>
 using namespace std;
 
 Tablero::Tablero(){
 texture.loadFromFile("C:/Users/Gonzalo/Desktop/Database/Sprites/Tablero/Tablero.png");
+_sprite.setScale(0.5f, 0.5f);
 setSprite(texture);
 
 }
 
-void Tablero::completarTableroNormal(){
-Tablero tableroNormal;
+void Tablero::completarTableroNormal(Tablero &tableroNormal){
 int opcion;
 int x,y;
 int coordenadaX,coordenadaY;
@@ -27,16 +29,16 @@ tableroNormal.vaciarTablero();
 
 while(embarcacionesUbicadas == false){
 
-    tableroNormal.mostrarTableroHumano();
+    tableroNormal.mostrarTableroHumano(tableroNormal);
     cout<<endl;
     cout<<"Que embarcacion desea ubicar"<<endl;
     cout<<endl;
-    if(destructorUbicado == false){
+    /*if(destructorUbicado == false){
         cout<<"1) "<<miDestructor.getNombre()<<endl;;
-    }
+    }*/
     if(fragataUbicada == false){
         cout<<"2) "<<miFragata.getNombre()<<endl;;
-    }
+    }/*
     if(submarinoUbicado == false){
         cout<<"3) "<<miSubmarino.getNombre()<<endl;
     }
@@ -45,7 +47,7 @@ while(embarcacionesUbicadas == false){
     }
     if(acorazadoUbicado == false){
         cout<<"5) "<<miAcorazado.getNombre()<<endl;;
-    }
+    }*/
 
 cout<<"Opcion: ";
 cin>>opcion;
@@ -55,35 +57,35 @@ case 1:
     system("cls");
     tableroNormal.ubicarDestructor(miDestructor, tableroNormal);
     system("cls");
-    tableroNormal.mostrarTableroHumano();
+    tableroNormal.mostrarTableroHumano(tableroNormal);
     destructorUbicado = true;
 break;
 case 2:
     system("cls");
     tableroNormal.ubicarFragata(miFragata, tableroNormal);
     system("cls"),
-    tableroNormal.mostrarTableroHumano();
+    tableroNormal.mostrarTableroHumano(tableroNormal);
     fragataUbicada = true;
 break;
 case 3:
     system("cls");
     tableroNormal.ubicarSubmarino(miSubmarino, tableroNormal);
     system("cls");
-    tableroNormal.mostrarTableroHumano();
+    tableroNormal.mostrarTableroHumano(tableroNormal);
     submarinoUbicado = true;
 break;
 case 4:
     system("cls");
     tableroNormal.ubicarPortaaviones(miPortaaviones, tableroNormal);
     system("cls");
-    tableroNormal.mostrarTableroHumano();
+    tableroNormal.mostrarTableroHumano(tableroNormal);
     portaavionesUbicado = true;
 break;
 case 5:
     system("cls");
     tableroNormal.ubicarAcorazado(miAcorazado,tableroNormal);
     system("cls");
-    tableroNormal.mostrarTableroHumano();
+    tableroNormal.mostrarTableroHumano(tableroNormal);
     acorazadoUbicado = true;
 break;
 
@@ -95,12 +97,13 @@ if(portaavionesUbicado == true && submarinoUbicado == true && acorazadoUbicado =
     cout<<"Preparate para la batalla"<<endl;
     embarcacionesUbicadas = true;
         }
+    embarcacionesUbicadas = true;
     }
 
 
 }
 
-void Tablero::mostrarTableroHumano(){
+void Tablero::mostrarTableroHumano(Tablero &miTablero){
 int x,y;
 int fila = 1;
 char columna;
@@ -120,9 +123,9 @@ for(x=0;x<10;x++){
 
     for(y=0;y<10;y++){
         if(fila!=10){
-            cout<<_Tamanio[x][y]<<"  ";
+            cout<<miTablero._Tamanio[x][y]<<"  ";
         }else{
-            cout<<" "<<_Tamanio[x][y]<<" ";
+            cout<<" "<<miTablero._Tamanio[x][y]<<" ";
         }
 
     }
@@ -152,7 +155,7 @@ int coordenadaX = 0,coordenadaY = 0, x, y, direccion;
 bool destructorUbicado = false, ubicacionValida = false;
 int limite;
 
-mostrarTableroHumano();
+mostrarTableroHumano(miTablero);
 
 cout<<"De que forma desea ubicar su "<<miDestructor.getNombre()<<endl;
 cout<<"1) Vertical"<<endl;
@@ -232,6 +235,8 @@ while(direccion!=1 && direccion != 2){
         }
     }
 
+miDestructor.setUbicacionEnTablero(coordenadaX,coordenadaY);
+
 
 }
 
@@ -241,7 +246,7 @@ void Tablero::ubicarAcorazado(Acorazado miAcorazado, Tablero miTablero){
 int coordenadaX = 0,coordenadaY = 0, x, y, direccion;
 bool acorazadoUbicado = false;
 
-mostrarTableroHumano();
+mostrarTableroHumano(miTablero);
 
 cout<<"De que forma desea ubicar su "<<miAcorazado.getNombre()<<endl;
 cout<<"1) Vertical"<<endl;
@@ -328,7 +333,7 @@ void Tablero::ubicarFragata(Fragata miFragata, Tablero miTablero){
 int coordenadaX = 0,coordenadaY = 0, x, y, direccion;
 bool fragataUbicada = false;
 
-mostrarTableroHumano();
+mostrarTableroHumano(miTablero);
 
 cout<<"De que forma desea ubicar su "<<miFragata.getNombre()<<endl;
 cout<<"1) Vertical"<<endl;
@@ -391,7 +396,7 @@ void Tablero::ubicarSubmarino(Submarino miSubmarino, Tablero miTablero){
 int coordenadaX = 0,coordenadaY = 0, x, y, direccion;
 bool submarinoUbicado = false;
 
-mostrarTableroHumano();
+mostrarTableroHumano(miTablero);
 
 cout<<"De que forma desea ubicar su "<<miSubmarino.getNombre()<<endl;
 cout<<"1) Vertical"<<endl;
@@ -478,7 +483,7 @@ void Tablero::ubicarPortaaviones (Portaaviones miPortaaviones, Tablero miTablero
 int coordenadaX = 0,coordenadaY = 0, x, y, direccion;
 bool portaavionesUbicado = false;
 
-mostrarTableroHumano();
+mostrarTableroHumano(miTablero);
 
 cout<<"De que forma desea ubicar su "<<miPortaaviones.getNombre()<<endl;
 cout<<"1) Vertical"<<endl;
@@ -563,6 +568,40 @@ while(portaavionesUbicado == false){
     }
 
 }
+
+void Tablero::atacar(int fila,int columna, Tablero &miTablero){
+
+if(miTablero._Tamanio[fila-1][columna-1] == 1){
+    cout<<"Barco detectado"<<endl;
+    miTablero._Tamanio[fila-1][columna-1] = 0;
+    }else if(miTablero._Tamanio[fila-1][columna-1] == 0){
+    cout<<"No se detectaron barcos";}
+}
+
+bool Tablero::evaluarTablero(Tablero &miTablero){
+int x,y;
+bool tableroVacio = true;
+
+for(x=0;x<10;x++){
+    for(y=0;y<10;y++){
+        if(miTablero._Tamanio[x][y] == 1){
+            tableroVacio = false;
+            return false;
+        }
+    }
+}
+
+if(tableroVacio == true){
+    cout<<"No quedan embarcaciones en el tablero"<<endl;
+    cout<<"Partida terminada"<<endl;
+    return true;
+        }
+    }
+
+
+
+
+
 
 
 

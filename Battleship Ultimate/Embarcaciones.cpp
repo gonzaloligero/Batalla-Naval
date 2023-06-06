@@ -1,9 +1,8 @@
 #include <iostream>
 #include "Embarcaciones.h"
+#include "Tablero.h"
 using namespace std;
 
-
-//void Embarcacion::setUbicacionEnTablero(int x,int y);
 
 
 

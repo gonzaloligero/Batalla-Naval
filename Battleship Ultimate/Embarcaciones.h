@@ -11,7 +11,7 @@ protected:
     int _UbicacionEnTablero;
 
 public:
-    void setUbicacionEnTablero(int x,int y);
+    //void setUbicacionEnTablero(int x,int y);
 
 };
 

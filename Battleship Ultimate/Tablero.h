@@ -29,10 +29,11 @@ public:
     void ubicarSubmarino(Submarino miSubmarino, Tablero miTablero);
     void ubicarPortaaviones (Portaaviones miPortaaviones, Tablero miTablero);
     void vaciarTablero();
-    void mostrarTableroHumano();
+    void mostrarTableroHumano(Tablero &miTablero);
     void mostrarTableroCPU();
-    void tachar(int fila,int columna);
-    void completarTableroNormal();
+    void atacar(int fila,int columna, Tablero &miTablero);
+    bool evaluarTablero(Tablero &miTablero);
+    void completarTableroNormal(Tablero &miTablero);
     void completarTableroBossFight();
 
 };
