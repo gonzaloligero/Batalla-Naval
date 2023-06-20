@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Battleship Ultimate" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Battleship Ultimate" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Battleship Ultimate" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="SFML/include" />
+		</Compiler>
+		<Linker>
+			<Add library="sfml-graphics" />
+			<Add library="sfml-window" />
+			<Add library="sfml-system" />
+			<Add library="sfml-audio" />
+			<Add directory="SFML/lib" />
+		</Linker>
+		<Unit filename="Acorazado.cpp" />
+		<Unit filename="Acorazado.h" />
+		<Unit filename="Avion.cpp" />
+		<Unit filename="Avion.h" />
+		<Unit filename="Bombardero.cpp" />
+		<Unit filename="Bombardero.h" />
+		<Unit filename="Boss.cpp" />
+		<Unit filename="Boss.h" />
+		<Unit filename="Caza.cpp" />
+		<Unit filename="Caza.h" />
+		<Unit filename="Destructor.cpp" />
+		<Unit filename="Destructor.h" />
+		<Unit filename="Dron.cpp" />
+		<Unit filename="Dron.h" />
+		<Unit filename="Embarcaciones.cpp" />
+		<Unit filename="Embarcaciones.h" />
+		<Unit filename="Enemigo.cpp" />
+		<Unit filename="Enemigo.h" />
+		<Unit filename="Fragata.cpp" />
+		<Unit filename="Fragata.h" />
+		<Unit filename="Funciones.cpp" />
+		<Unit filename="Funciones.h" />
+		<Unit filename="Ghost.cpp" />
+		<Unit filename="Ghost.h" />
+		<Unit filename="Juego.cpp" />
+		<Unit filename="Juego.h" />
+		<Unit filename="Jugador.cpp" />
+		<Unit filename="Jugador.h" />
+		<Unit filename="Nagronar.cpp" />
+		<Unit filename="Nagronar.h" />
+		<Unit filename="Nautilus.cpp" />
+		<Unit filename="Nautilus.h" />
+		<Unit filename="Portaaviones.cpp" />
+		<Unit filename="Portaaviones.h" />
+		<Unit filename="Reconocimiento.cpp" />
+		<Unit filename="Reconocimiento.h" />
+		<Unit filename="Submarino.cpp" />
+		<Unit filename="Submarino.h" />
+		<Unit filename="Tablero.cpp" />
+		<Unit filename="Tablero.h" />
+		<Unit filename="UFO.cpp" />
+		<Unit filename="UFO.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
